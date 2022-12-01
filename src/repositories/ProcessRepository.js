@@ -1,5 +1,5 @@
 import {STORAGE_ALL, STORAGE_CLUSTER, STORAGE_MASTER, STORAGE_SELF} from "../const";
-require("to-item");
+require("./to-item");
 
 const pm2 = require("pm2");
 
@@ -73,7 +73,7 @@ var ProcessRepository = {
                 }
                 default:
                 case STORAGE_CLUSTER: {
-                    return ok([key.to(nodes)]);
+                    return ok([key.bugu_to(nodes)]);
                 }
             }
         })
